@@ -9,9 +9,15 @@ boards = [[[int(n) for n in i.split()] for i in board.split('\n')] for board in 
 selected = [[[False for n in i.split()] for i in board.split('\n')] for board in bingo[1:]]
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 def findrow(arr, x) -> int | None: 
 	for n, i in enuemrate(arr): 
 		if  x in i: 
+=======
+def findrow(arr, x) -> int | None:
+	for n, i in enumerate(arr):
+		if  x in i:
+>>>>>>> b36885e (add files from mac mini)
 =======
 def findrow(arr, x) -> int | None:
 	for n, i in enumerate(arr):
@@ -21,6 +27,7 @@ def findrow(arr, x) -> int | None:
 	return None
 
 def findcol(arr, x) -> int | None:
+<<<<<<< HEAD
 <<<<<<< HEAD
 	for i in arr: 
 		if x in i: 
@@ -53,6 +60,8 @@ for num in nums:
 		if (fr := findrow(board, num)
 
 =======
+=======
+>>>>>>> b36885e (add files from mac mini)
 	for i in arr:
 		if x in i:
 			return i.index(x)
@@ -91,5 +100,8 @@ for num in nums:
 	for i in srm: selected.remove(i)
 print(scores)
 print(len(scores), len(boards))
+<<<<<<< HEAD
+>>>>>>> b36885e (add files from mac mini)
+=======
 >>>>>>> b36885e (add files from mac mini)
 

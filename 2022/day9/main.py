@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 def vect(a, b):
     return tuple(x + y for x, y in zip(a, b))
 
@@ -37,6 +38,8 @@ with open('input.txt', 'r') as file:
     print(len(visited))
 
 =======
+=======
+>>>>>>> b36885e (add files from mac mini)
 from sys import argv
 neighbors = lambda x, y : [(x2, y2) for x2 in range(x-1, x+2)
                                for y2 in range(y-1, y+2)]
@@ -96,5 +99,8 @@ with open('input.txt') as file:
 			print(dr, rope)
 
 	print(len(visited))
+<<<<<<< HEAD
+>>>>>>> b36885e (add files from mac mini)
+=======
 >>>>>>> b36885e (add files from mac mini)
 
