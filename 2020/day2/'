@@ -1,0 +1,12 @@
+with open('input.txt', 'r') as file: 
+	passwords = [i.strip().split() for i in file.readlines()]
+
+# part 1
+p1 = 0
+for p in passwords: 
+	start, end = [int(i) for i in p[0].split('-')]
+	char = p[1][0]
+	pas = p[2]
+	if start < pas.count(char) < end: 
+		p1 += 1
+print(p1)
