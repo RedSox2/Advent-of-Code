@@ -16,8 +16,10 @@ with open(f'{argv[1]}.txt', 'r') as file:
 	valid = 0
 	passports = [i.split() for i in passports]
 	for i in passports: 
-		if not all([[any(n in j for j in i)] for n in req]): 
-			print('Not all req')
+		r = []
+		for n in req: 
+			r.append(any(n in j for j in i))
+		if not all(r): 
 			continue
 
 		for n in i: 
