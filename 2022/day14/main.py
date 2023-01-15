@@ -20,18 +20,17 @@ for n, path in enumerate(paths):
 
 occ = list(set(occ))
 
-getrow = lambda n: [(x, y) for x, y in occ if y == n]
-getcol = lambda n: [(x, y) for x, y in occ if x == n]
-
-abyss = max(occ, key=lambda x: x[1])[1]
+abyss = max(occ, key=lambda x: x[1])[1]+1 # remove +2 for part 1
 
 sand = 0
 
 while True: 
-	sx, sy = 500, 1
+	sx, sy = 500, 0
 	rest = False
-	while not rest and sy > abyss: 	
-		if (sx, sy+1) in occ: 
+	while not rest: 	
+		if sy == abyss: 
+			rest = True
+		elif (sx, sy+1) in occ: 
 			if (sx-1, sy+1) not in occ: 
 				sx -= 1
 				sy += 1
@@ -39,7 +38,17 @@ while True:
 				sx += 1
 				sy += 1
 			else: 
+				if (sx, sy) == (500, 0): 
+					sand += 1
+					break
 				rest = True
-			
+		else: 
+			sy += 1
+	else: 
+		occ.append((sx, sy))
+		sand += 1
+		continue
+	print(sand)
+	break
 		
 
